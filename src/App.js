@@ -5,8 +5,8 @@ import { Shop } from "./pages/shop/shop";
 import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
 import Navbarlog from "./components/Navbar";
-import SignIn from "./pages/Auth/SingIn";
-import SignUp from "./pages/Auth/SingUp";
+import SignIn from "./pages/Auth/SignIn";
+import SignUp from "./pages/Auth/SignUp";
 import Profile from "./pages/Auth/Profile"
 import Chating from "./pages/Auth/Chating";
 import Products from "./pages/Products/Products";
