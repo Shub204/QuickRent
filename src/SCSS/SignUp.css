@@ -1,0 +1,83 @@
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 100%;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 100px;
+  }
+  h2{
+    font-size: 30px;
+    color: black;
+    text-align: center;
+  }
+  .input-group {
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid grey;
+  }
+  .input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    font-size: 16px;
+    color: black;
+    pointer-events: none;
+
+  }
+  .input-group input {
+    width: 320px;
+    height: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 0 5px;
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+  .input-group input:focus~label,
+  .input-group input:valid~label {
+    top: -5px;
+  }
+  .remember {
+    margin: -5px 0 15px 5px;
+  }
+  .remember label {
+    color: black;
+    font-size: 14px;
+  }
+  .remember label input {
+    accent-color: #0ef;
+  }
+  .button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #0ef;
+    box-shadow: 0 0 10px BLACK;
+    font-size: 16px;
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+  }
+  .signUp-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .signUp-link p {
+    color: black;
+  }
+  .signUp-link p a {
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .signUp-link p a:hover {
+    text-decoration: underline;
+  }
