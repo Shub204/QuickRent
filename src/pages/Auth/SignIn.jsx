@@ -6,9 +6,11 @@ import { useNavigate } from 'react-router-dom';
 import '../../SCSS/SignIn.css'
 import { FaUser, FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useModal } from '../../ModalContext';
+import SignUp from './SignUp';
 
 function SignIn() {
-
+    const { openModal, closeModal, modalContent } = useModal();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
 
@@ -57,7 +59,7 @@ function SignIn() {
             <button onClick={signInUser}>Submit</button>
             <button onClick={signInwithGoogle}>SignIn With <FcGoogle size={30}/></button>
             <div className="register-link">
-                <p>Don't have any account? <a href='./signup'>Register</a></p>
+                <p>Don't have any account?<button onClick={() => openModal(<SignUp/>)}>Sign Up</button></p>
             </div>
         </form>
     </div>

@@ -8,10 +8,13 @@ import { setDoc, doc} from 'firebase/firestore';
 import { RiImageAddFill } from "react-icons/ri";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import '../../SCSS/SignUp.css'
+import { useModal } from '../../ModalContext';
+import SignIn from './SignIn';
 
 
 
 function SignUp() {
+  const { openModal, closeModal, modalContent } = useModal();
     const [err, setErr] = useState(false);
     const [loading, setLoading] = useState(false);
     // const [showpassword, setshowpassword] = useState(false);
@@ -82,7 +85,7 @@ function SignUp() {
         </div>
         <button className='button' type="submit">Sign Up</button>
         <div className="signUp-link">
-          <p>Already have an account? <a href='./signin' className="signInBtn-link">Sign In</a></p>
+          <p>Already have an account?<button onClick={() => openModal(<SignIn/>)}>Signin</button></p>
         </div>
       </form>
     </div>  

@@ -11,12 +11,15 @@ import Profile from "./pages/Auth/Profile"
 import Chating from "./pages/Auth/Chating";
 import Products from "./pages/Products/Products";
 import { Footer } from "./components/Footer/Footer";
+import { ModalProvider } from "./ModalContext";
+import ModalComponent from "./ModalComponent";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbarlog />
+        <ModalProvider>
+          <Navbarlog />
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
@@ -27,9 +30,9 @@ function App() {
                 <Route element={<Chating/>} path="/chats"/>
             </Route>
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
         </Routes>
         <Footer/>
+        </ModalProvider>
       </Router>
     </div>
 
