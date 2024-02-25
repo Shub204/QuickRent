@@ -1,0 +1,25 @@
+.custom-dropdown {
+    width: 55px; /* Set a smaller width for the initial state */
+    padding: 5px;
+    font-size: 16px; /* Adjust the font size as needed */
+    transition: width 0.3s ease; /* Add a transition for a smoother animation */
+  }
+  
+  .custom-dropdown.expanded {
+    width: auto; /* Expand the width when an option is selected */
+  }
+  
+  .custom-dropdown option {
+    /* Style for the dropdown options */
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 8px;
+    font-size: 14px;
+    width: auto;
+  }
+  
+  .custom-dropdown.expanded option {
+    /* Additional styles when dropdown is expanded */
+    background-color: #ddd;
+  }
+  
