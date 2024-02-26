@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
+
 .custom-dropdown {
-    width: 55px; /* Set a smaller width for the initial state */
-    padding: 5px;
-    font-size: 16px; /* Adjust the font size as needed */
+    font-family: "Roboto", sans-serif;
+    width: 65px; /* Set a smaller width for the initial state */
+    padding: 15px 8px 14px 8px;
+    background-color: yellow;
+    font-size: 15px; /* Adjust the font size as needed */
     transition: width 0.3s ease; /* Add a transition for a smoother animation */
+    border: none;
+    border-radius: 4px 0 0 4px;
   }
   
   .custom-dropdown.expanded {
@@ -13,8 +19,8 @@
     /* Style for the dropdown options */
     background-color: #f2f2f2;
     color: #333;
-    padding: 8px;
-    font-size: 14px;
+    padding: 80px;
+    font-size: 19px;
     width: auto;
   }
   
