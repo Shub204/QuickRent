@@ -13,13 +13,14 @@ import Products from "./pages/Products/Products";
 import { Footer } from "./components/Footer/Footer";
 import { ModalProvider } from "./ModalContext";
 import ModalComponent from "./ModalComponent";
+import Navbar2 from "./components/Navbar2";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <ModalProvider>
-          <Navbarlog />
+          <Navbarlog/>
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />

@@ -13,7 +13,7 @@ export const Shop = () => {
   const { product } = useContext(ProductContext);
 
   return (
-    <div className="shop" style={{margin: '100px 5px'}}>
+    <div className="shop">
       <div className="shopTitle">
         <Crousel />
       </div>

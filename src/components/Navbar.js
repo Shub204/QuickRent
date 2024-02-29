@@ -37,8 +37,8 @@ function Navbarlog() {
 
   const customModalStyles = {
     content: {
-      width: '425px', // Adjust the width as needed
-      height: '540px', // Adjust the height as needed
+      width: '460px', // Adjust the width as needed
+      height: '510px', // Adjust the height as needed
       margin: 'auto',
       backgroundColor: 'white', // Adjust the background color
       borderRadius: '8px', // Add border-radius for rounded corners
@@ -46,7 +46,7 @@ function Navbarlog() {
       padding: '0'
     },
     overlay: {
-      backgroundColor: 'rgba(0, 0, 0, 0.5)', // Adjust the overlay background color and transparency
+      backgroundColor: 'rgba(0, 0, 0, 0.7)', // Adjust the overlay background color and transparency
     },
   };
 
@@ -113,9 +113,9 @@ function Navbarlog() {
                           Profile
                         </NavDropdown.Item>
                       </MDBDropdownItem>
-                      {/* <MDBDropdownItem>
+                      <MDBDropdownItem>
                           <NavDropdown.Item onClick={SingOut}>SignOut</NavDropdown.Item>
-                        </MDBDropdownItem> */}
+                        </MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 ) : (
