@@ -8,6 +8,9 @@ import { FaUser, FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { useModal } from "../../ModalContext";
 import SignUp from "./SignUp";
+import user_icon from "../../components/Assets/person.png";
+import email_icon from "../../components/Assets/email.png";
+import password_icon from "../../components/Assets/password.png";
 
 function SignIn() {
   const { openModal, closeModal, modalContent } = useModal();
@@ -37,19 +40,45 @@ function SignIn() {
   }
 
   return (
+    // <div className="login">
+    //   <h1>Login</h1>
+    //   <form className="login-container">
+    //     <button className="login-button-one" onClick={signInwithGoogle}>
+    //       SignIn With <FcGoogle size={30} />
+    //     </button>
+    //     <div className="login-pipe">OR</div>
+    //     <input type="email,number" placeholder="Enter Email or Phone Number" />
+    //     <input type="password" placeholder="Password" />
+    //     <button>Login</button>
+    //     <a href="#">REGISTER</a>
+    //     <a href="#">Forgot Password?</a>
+    //   </form>
+    // </div>
     <div className="login">
-      <h1>Login</h1>
-      <form className="login-container">
-        <button className="login-button-one" onClick={signInwithGoogle}>
-          SignIn With <FcGoogle size={30} />
-        </button>
-        <div className="login-pipe">OR</div>
-        <input type="email,number" placeholder="Enter Email or Phone Number" />
-        <input type="password" placeholder="Password" />
-        <button>Login</button>
-        <a href="#">REGISTER</a>
-        <a href="#">Forgot Password?</a>
-      </form>
+      <div className="header">
+        <div className="text">SignUp</div>
+        <div className="underline"></div>
+      </div>
+      <div className="inputs">
+        <div className="input">
+          <img src={email_icon} alt="" />
+          <input type="email" placeholder="Email" />
+        </div>
+        <div className="input">
+          <img src={password_icon} alt="" />
+          <input type="password" placeholder="Password" />
+        </div>
+      </div>
+      <div className="forgot-password">Forgot Password?</div>
+      <div className="submit-container">
+        <div className="submit" onClick={() => openModal(<SignUp />)}>
+          SignUp?
+        </div>
+        <div className="submit">Login</div>
+      </div>
+      <button className="login-button" onClick={signInwithGoogle}>
+        SignIn With <FcGoogle size={30} />
+      </button>
     </div>
   );
 }

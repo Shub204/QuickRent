@@ -1,80 +1,74 @@
-.form-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 420px;
-    height: 535px;
+.signup{
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(circle 248px at center, #30c7ec 47%, #46aef7 100%);
 }
-  h2{
-    font-size: 30px;
-    color: black;
-    text-align: center;
-   }
-  .input-group {
-    position: relative;
-    margin: 30px 0;
-    border-bottom: 2px solid grey;
-  }
-  .input-group label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    font-size: 16px;
-    color: black;
-    pointer-events: none;
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+.text{
+  color: rgb(0, 65, 162);
+  font-size: 40px;
+  font-weight: 600;
+}
+.underline{
+  width: 130px;
+  height: 6px;
+  background: rgb(0, 65, 162);
+  border-radius: 9px;
+}
+.inputs{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 400px;
+  height: 80px;
+  background: rgba(0, 18, 59, 0.611);
+  border-radius: 6px;
+}
+.input img{
+  margin: 0px 30px;
+}
+.inputs input{
+  height: 50px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 19px;
+}
+.inputs input::placeholder{
+  color: rgb(0, 0, 0);
+}
+.submit-container{
+  display: flex;
+  gap: 30px;
+  margin: 13px auto;
+}
+.submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 59px;
+  color: white;
+  background: black;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+}
 
-  }
-  .input-group input {
-    width: 320px;
-    height: 40px;
-    font-size: 16px;
-    color: black;
-    padding: 0 5px;
-    background: transparent;
-    border: none;
-    outline: none;
-  }
-  .input-group input:focus~label,
-  .input-group input:valid~label {
-    top: -5px;
-  }
-  .remember {
-    margin: -5px 0 15px 5px;
-  }
-  .remember label {
-    color: black;
-    font-size: 14px;
-  }
-  .remember label input {
-    accent-color: #0ef;
-  }
-  .button {
-    position: relative;
-    width: 100%;
-    height: 40px;
-    background: #0ef;
-    box-shadow: 0 0 10px BLACK;
-    font-size: 16px;
-    color: #000;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-  }
-  .signUp-link {
-    font-size: 14px;
-    text-align: center;
-    margin: 15px 0;
-  }
-  .signUp-link p {
-    color: black;
-  }
-  .signUp-link p a {
-    color: #0ef;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  .signUp-link p a:hover {
-    text-decoration: underline;
-  }
+
+

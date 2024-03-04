@@ -10,8 +10,9 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import '../../SCSS/SignUp.css'
 import { useModal } from '../../ModalContext';
 import SignIn from './SignIn';
-
-
+import user_icon from '../../components/Assets/person.png'
+import email_icon from '../../components/Assets/email.png'
+import password_icon from '../../components/Assets/password.png'
 
 function SignUp() {
   const { openModal, closeModal, modalContent } = useModal();
@@ -64,31 +65,31 @@ function SignUp() {
         }
     }
 
-    return (
-      <div className="form-wrapper">
-      <form action="">
-        <h2>Sign Up</h2>
-        <div className="input-group">
-          <input type="text" required/>
-          <label for="">Username</label>
+    return ( 
+    <div className='signup'>
+      <div className="header">
+        <div className="text">SignUp</div>
+        <div className="underline"></div>
+      </div>
+      <form onSubmit={createUser} className='inputs'>
+        <div className="input">
+          <img src={user_icon} alt="" />
+          <input type="text" placeholder="Name"/>
         </div>
-        <div className="input-group">
-          <input type="email" required/>
-          <label for="">Email</label>
+        <div className="input">
+          <img src={email_icon} alt="" />
+          <input type="email" placeholder="Email"/>
         </div>
-        <div className="input-group">
-          <input type="password" required/>
-          <label for="">Password</label>
-        </div>
-        <div className="remember">
-          <label><input type="checkbox"/> I agree to the terms & conditions</label>
-        </div>
-        <button className='button' type="submit">Sign Up</button>
-        <div className="signUp-link">
-          <p>Already have an account?<button onClick={() => openModal(<SignIn/>)}>Signin</button></p>
+        <div className="input">
+          <img src={password_icon} alt="" />
+          <input type="password" placeholder="Password"/>
         </div>
       </form>
-    </div>  
+      <div className="submit-container">
+        <div className="submit">SignUp</div>
+        <div className="submit"><span onClick={() => openModal(<SignIn/>)}>Login?</span></div>
+      </div>
+    </div>
     );
 }
  // <div className="formContainer">
